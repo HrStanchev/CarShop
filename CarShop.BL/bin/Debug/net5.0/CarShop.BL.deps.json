@@ -1,0 +1,50 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "CarShop.BL/1.0.0": {
+        "dependencies": {
+          "CarShop.DL": "1.0.0",
+          "CarShop.Models": "1.0.0"
+        },
+        "runtime": {
+          "CarShop.BL.dll": {}
+        }
+      },
+      "CarShop.DL/1.0.0": {
+        "dependencies": {
+          "CarShop.Models": "1.0.0"
+        },
+        "runtime": {
+          "CarShop.DL.dll": {}
+        }
+      },
+      "CarShop.Models/1.0.0": {
+        "runtime": {
+          "CarShop.Models.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "CarShop.BL/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CarShop.DL/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CarShop.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

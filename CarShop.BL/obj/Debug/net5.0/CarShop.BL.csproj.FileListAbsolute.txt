@@ -1,0 +1,17 @@
+C:\Users\Stanchev\Desktop\uni\C#\project\CarShop\CarShop.BL\bin\Debug\net5.0\CarShop.BL.deps.json
+C:\Users\Stanchev\Desktop\uni\C#\project\CarShop\CarShop.BL\bin\Debug\net5.0\CarShop.BL.dll
+C:\Users\Stanchev\Desktop\uni\C#\project\CarShop\CarShop.BL\bin\Debug\net5.0\ref\CarShop.BL.dll
+C:\Users\Stanchev\Desktop\uni\C#\project\CarShop\CarShop.BL\bin\Debug\net5.0\CarShop.BL.pdb
+C:\Users\Stanchev\Desktop\uni\C#\project\CarShop\CarShop.BL\bin\Debug\net5.0\CarShop.DL.dll
+C:\Users\Stanchev\Desktop\uni\C#\project\CarShop\CarShop.BL\bin\Debug\net5.0\CarShop.Models.dll
+C:\Users\Stanchev\Desktop\uni\C#\project\CarShop\CarShop.BL\bin\Debug\net5.0\CarShop.DL.pdb
+C:\Users\Stanchev\Desktop\uni\C#\project\CarShop\CarShop.BL\bin\Debug\net5.0\CarShop.Models.pdb
+C:\Users\Stanchev\Desktop\uni\C#\project\CarShop\CarShop.BL\obj\Debug\net5.0\CarShop.BL.csproj.AssemblyReference.cache
+C:\Users\Stanchev\Desktop\uni\C#\project\CarShop\CarShop.BL\obj\Debug\net5.0\CarShop.BL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Stanchev\Desktop\uni\C#\project\CarShop\CarShop.BL\obj\Debug\net5.0\CarShop.BL.AssemblyInfoInputs.cache
+C:\Users\Stanchev\Desktop\uni\C#\project\CarShop\CarShop.BL\obj\Debug\net5.0\CarShop.BL.AssemblyInfo.cs
+C:\Users\Stanchev\Desktop\uni\C#\project\CarShop\CarShop.BL\obj\Debug\net5.0\CarShop.BL.csproj.CoreCompileInputs.cache
+C:\Users\Stanchev\Desktop\uni\C#\project\CarShop\CarShop.BL\obj\Debug\net5.0\CarShop.BL.csproj.CopyComplete
+C:\Users\Stanchev\Desktop\uni\C#\project\CarShop\CarShop.BL\obj\Debug\net5.0\CarShop.BL.dll
+C:\Users\Stanchev\Desktop\uni\C#\project\CarShop\CarShop.BL\obj\Debug\net5.0\ref\CarShop.BL.dll
+C:\Users\Stanchev\Desktop\uni\C#\project\CarShop\CarShop.BL\obj\Debug\net5.0\CarShop.BL.pdb
