@@ -6,16 +6,19 @@ using System.Threading.Tasks;
 using CarShop.Models.DTO;
 using CarShop.DL.Interfaces;
 using CarShop.BL.Interfaces;
+using Serilog;
 
 namespace CarShop.BL.Services
 {
-    public class EmployeeService
+    public class EmployeeService : IEmployeeService
     {
         private readonly IEmployeeRepository _employeeRepository;
+        private readonly ILogger _logger;
 
-        public EmployeeService(IEmployeeRepository employeeRepository)
+        public EmployeeService(IEmployeeRepository employeeRepository, ILogger logger)
         {
             _employeeRepository = employeeRepository;
+            _logger = logger;
         }
 
         public Employee Create(Employee employee)

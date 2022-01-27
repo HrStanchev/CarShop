@@ -1,0 +1,26 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "586e6db1-f7a5-4514-bc66-bfdfd37fc404": {
+      "ProjectGuid": "586e6db1-f7a5-4514-bc66-bfdfd37fc404",
+      "DisplayName": "CarShop",
+      "ColorIndex": 0
+    },
+    "d1b2d270-2a66-41a4-a126-25951508f239": {
+      "ProjectGuid": "d1b2d270-2a66-41a4-a126-25951508f239",
+      "DisplayName": "CarShop.Models",
+      "ColorIndex": 1
+    },
+    "1e87b97b-3b35-4b8c-b70b-188f2a5dfa4d": {
+      "ProjectGuid": "1e87b97b-3b35-4b8c-b70b-188f2a5dfa4d",
+      "DisplayName": "CarShop.DL",
+      "ColorIndex": 2
+    },
+    "c36155b3-3672-4b57-a522-1c143151c233": {
+      "ProjectGuid": "c36155b3-3672-4b57-a522-1c143151c233",
+      "DisplayName": "CarShop.BL",
+      "ColorIndex": 3
+    }
+  },
+  "NextColorIndex": 4
+}

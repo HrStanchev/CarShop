@@ -1,0 +1,83 @@
+﻿using AutoMapper;
+using CarShop.BL.Interfaces;
+using CarShop.Models.DTO;
+using CarShop.Models.Requests;
+using CarShop.Models.Responses;
+using Microsoft.AspNetCore.Mvc;
+
+namespace CarShop.Controllers
+{
+    [ApiController]
+    [Route("[controller]")]
+    public class PartController : ControllerBase
+    {
+        private readonly IPartService _partService;
+        private readonly IMapper _mapper;
+
+        public PartController(IPartService partService, IMapper mapper)
+        {
+            _partService = partService;
+            _mapper = mapper;
+        }
+
+        [HttpGet("GetAll")]
+        public IActionResult GetAll()
+        {
+            var result = _partService.GetAll();
+
+            return Ok(result);
+        }
+        [HttpGet("GetById")]
+        public IActionResult GetById(int id)
+        {
+            if (id <= 0) return BadRequest();
+
+            var result = _partService.GetById(id);
+            if (result == null) return NotFound();
+
+            var response = _mapper.Map<PartResponse>(result);
+
+            return Ok(response);
+        }
+
+        [HttpPost("Create")]
+        public IActionResult CreatePart([FromBody] PartRequest partRequest)
+        {
+            if (partRequest == null) return BadRequest();
+
+            var part = _mapper.Map<Part>(partRequest);
+            var result = _partService.Create(part);
+
+            return Ok(part);
+        }
+
+        [HttpDelete]
+        public IActionResult Delete(int id)
+        {
+            if (id < 0) return BadRequest();
+
+            var result = _partService.Delete(id);
+
+            if (result == null) return NotFound();
+
+            return Ok(result);
+        }
+
+        [HttpPost("Update")]
+        public IActionResult Update([FromBody] PartUpdateRequest partRequest)
+        {
+            if (partRequest == null) return BadRequest();
+
+            var searchPart = _partService.GetById(partRequest.Id);
+            if (searchPart == null) return NotFound(partRequest.Id);
+
+            searchPart.Name = partRequest.Name;
+            var result = _partService.Update(searchPart);
+
+            return Ok(result);
+        }
+
+
+
+    }
+}

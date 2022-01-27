@@ -6,16 +6,19 @@ using System.Threading.Tasks;
 using CarShop.Models.DTO;
 using CarShop.DL.Interfaces;
 using CarShop.BL.Interfaces;
+using Serilog;
 
 namespace CarShop.BL.Services
 {
-    public class CarService
+    public class CarService : ICarService
     {
         private readonly ICarRepository _carRepository;
+        private readonly ILogger _logger;
 
-        public CarService(ICarRepository carRepository)
+        public CarService(ICarRepository carRepository, ILogger logger)
         {
             _carRepository = carRepository;
+            _logger = logger;
         }
 
         public Car Create(Car car)

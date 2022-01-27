@@ -6,16 +6,19 @@ using System.Threading.Tasks;
 using CarShop.Models.DTO;
 using CarShop.DL.Interfaces;
 using CarShop.BL.Interfaces;
+using Serilog;
 
 namespace CarShop.BL.Services
 {
-    public class PartService
+    public class PartService : IPartService
     {
         private readonly IPartRepository _partRepository;
+        private readonly ILogger _logger;
 
-        public PartService(IPartRepository partRepository)
+        public PartService(IPartRepository partRepository, ILogger logger)
         {
             _partRepository = partRepository;
+            _logger = logger;
         }
 
         public Part Create(Part part)

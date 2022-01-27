@@ -8,6 +8,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using CarShop.BL.Interfaces;
+using CarShop.BL.Services;
+using CarShop.DL.Interfaces;
+using CarShop.DL.Repositories;
+using Microsoft.OpenApi.Models;
+using Serilog;
 
 namespace CarShop
 {
@@ -24,24 +30,54 @@ namespace CarShop
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
+
+            services.AddSingleton(Log.Logger);
+            services.AddAutoMapper(typeof(Startup));
+
+            services.AddSingleton<ICarRepository, CarInMemoryRepository>();
+            services.AddSingleton<IClientRepository, ClientInMemoryRepository>();
+            services.AddSingleton<IEmployeeRepository, EmployeeInMemoryRepository>();
+            services.AddSingleton<IPartRepository, PartInMemoryRepository>();
+            services.AddSingleton<IServiceRepository, ServiceInMemoryRepository>();
+
+            services.AddSingleton<ICarService, CarService>();
+            services.AddSingleton<IClientService, ClientService>();
+            services.AddSingleton<IEmployeeService, EmployeeService>();
+            services.AddSingleton<IPartService, PartService>();
+            services.AddSingleton<IServiceService, ServiceService>();
+           
+
+
+
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "CarShop", Version = "v1" });
+            });
+
+            services.AddHealthChecks();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ILogger logger)
         {
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-            }
-            else
-            {
-                app.UseExceptionHandler("/Error");
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-                app.UseHsts();
+                app.UseSwagger();
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "CarShop v1"));
             }
 
+
+
+            //else
+            //{
+            //    app.UseExceptionHandler("/Error");
+            //    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+            //    app.UseHsts();
+            //}
+            
             app.UseHttpsRedirection();
-            app.UseStaticFiles();
+            //app.UseStaticFiles();
 
             app.UseRouting();
 
@@ -49,7 +85,9 @@ namespace CarShop
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapRazorPages();
+                //endpoints.MapRazorPages();
+                endpoints.MapControllers();
+                endpoints.MapHealthChecks("/health");
             });
         }
     }
