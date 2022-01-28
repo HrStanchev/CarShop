@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31912.275
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarShop", "CarShop\CarShop.csproj", "{586E6DB1-F7A5-4514-BC66-BFDFD37FC404}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarShop", "CarShop\CarShop.csproj", "{586E6DB1-F7A5-4514-BC66-BFDFD37FC404}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarShop.Models", "CarShop.Models\CarShop.Models.csproj", "{D1B2D270-2A66-41A4-A126-25951508F239}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarShop.Models", "CarShop.Models\CarShop.Models.csproj", "{D1B2D270-2A66-41A4-A126-25951508F239}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarShop.DL", "CarShop.DL\CarShop.DL.csproj", "{1E87B97B-3B35-4B8C-B70B-188F2A5DFA4D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarShop.DL", "CarShop.DL\CarShop.DL.csproj", "{1E87B97B-3B35-4B8C-B70B-188F2A5DFA4D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarShop.BL", "CarShop.BL\CarShop.BL.csproj", "{C36155B3-3672-4B57-A522-1C143151C233}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarShop.BL", "CarShop.BL\CarShop.BL.csproj", "{C36155B3-3672-4B57-A522-1C143151C233}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarShop.Test", "CarShop.Test\CarShop.Test.csproj", "{97B9E8C1-FBE5-424F-B7B2-2A62E257E593}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{C36155B3-3672-4B57-A522-1C143151C233}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C36155B3-3672-4B57-A522-1C143151C233}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C36155B3-3672-4B57-A522-1C143151C233}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97B9E8C1-FBE5-424F-B7B2-2A62E257E593}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97B9E8C1-FBE5-424F-B7B2-2A62E257E593}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97B9E8C1-FBE5-424F-B7B2-2A62E257E593}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97B9E8C1-FBE5-424F-B7B2-2A62E257E593}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
