@@ -1,11 +1,8 @@
-﻿using System;
+﻿using CarShop.DL.InMemoryDb;
+using CarShop.DL.Interfaces;
+using CarShop.Models.DTO;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using CarShop.Models.DTO;
-using CarShop.DL.InMemoryDb;
-using CarShop.DL.Interfaces;
 
 namespace CarShop.DL.Repositories
 {

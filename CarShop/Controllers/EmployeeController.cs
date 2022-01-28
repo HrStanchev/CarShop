@@ -72,6 +72,9 @@ namespace CarShop.Controllers
             if (searchEmployee == null) return NotFound(employeeRequest.Id);
 
             searchEmployee.Name = employeeRequest.Name;
+            searchEmployee.Competence = employeeRequest.Competence;
+            searchEmployee.Salary = employeeRequest.Salary;
+
             var result = _employeeService.Update(searchEmployee);
 
             return Ok(result);

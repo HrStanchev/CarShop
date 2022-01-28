@@ -1,12 +1,9 @@
-﻿using System;
+﻿using CarShop.BL.Interfaces;
+using CarShop.DL.Interfaces;
+using CarShop.Models.DTO;
+using Serilog;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using CarShop.Models.DTO;
-using CarShop.DL.Interfaces;
-using CarShop.BL.Interfaces;
-using Serilog;
 
 namespace CarShop.BL.Services
 {

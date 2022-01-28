@@ -72,6 +72,8 @@ namespace CarShop.Controllers
             if (searchService == null) return NotFound(serviceRequest.Id);
 
             searchService.Name = serviceRequest.Name;
+            searchService.Price = serviceRequest.Price;
+
             var result = _serviceService.Update(searchService);
 
             return Ok(result);

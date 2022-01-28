@@ -72,6 +72,9 @@ namespace CarShop.Controllers
             if (searchPart == null) return NotFound(partRequest.Id);
 
             searchPart.Name = partRequest.Name;
+            searchPart.PartNumber = partRequest.PartNumber;
+            searchPart.Price = partRequest.Price;
+
             var result = _partService.Update(searchPart);
 
             return Ok(result);

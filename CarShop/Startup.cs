@@ -1,17 +1,14 @@
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using CarShop.BL.Interfaces;
 using CarShop.BL.Services;
 using CarShop.DL.Interfaces;
 using CarShop.DL.Repositories;
+using CarShop.Extensions;
+using FluentValidation.AspNetCore;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using Serilog;
 
@@ -29,7 +26,7 @@ namespace CarShop
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddRazorPages();
+            //services.AddRazorPages();
 
             services.AddSingleton(Log.Logger);
             services.AddAutoMapper(typeof(Startup));
@@ -45,8 +42,8 @@ namespace CarShop
             services.AddSingleton<IEmployeeService, EmployeeService>();
             services.AddSingleton<IPartService, PartService>();
             services.AddSingleton<IServiceService, ServiceService>();
-           
 
+            services.AddControllers().AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<Startup>());
 
 
             services.AddSwaggerGen(c =>
@@ -75,7 +72,8 @@ namespace CarShop
             //    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
             //    app.UseHsts();
             //}
-            
+
+            app.ConfigureExceptionHandler(logger);
             app.UseHttpsRedirection();
             //app.UseStaticFiles();
 

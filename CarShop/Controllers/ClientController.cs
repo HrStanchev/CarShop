@@ -72,6 +72,10 @@ namespace CarShop.Controllers
             if(searchClient == null) return NotFound(clientRequest.Id);
 
             searchClient.Name = clientRequest.Name;
+            searchClient.PaymentType = clientRequest.PaymentType;
+            searchClient.Discount = clientRequest.Discount;
+            searchClient.Car = clientRequest.Car;
+
             var result = _clientService.Update(searchClient);
 
             return Ok(result);

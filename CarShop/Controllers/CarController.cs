@@ -73,6 +73,7 @@ namespace CarShop.Controllers
 
             searchCar.Make = carRequest.Make;
             searchCar.Model = carRequest.Model;
+
             var result = _carService.Update(searchCar);
 
             return Ok(result);
