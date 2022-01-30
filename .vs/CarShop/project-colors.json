@@ -25,6 +25,11 @@
       "ProjectGuid": "97b9e8c1-fbe5-424f-b7b2-2a62e257e593",
       "DisplayName": "CarShop.Test",
       "ColorIndex": 4
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
     }
   },
   "NextColorIndex": 5

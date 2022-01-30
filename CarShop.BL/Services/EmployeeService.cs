@@ -11,11 +11,17 @@ namespace CarShop.BL.Services
     {
         private readonly IEmployeeRepository _employeeRepository;
         private readonly ILogger _logger;
+        private IEmployeeRepository @object;
 
         public EmployeeService(IEmployeeRepository employeeRepository, ILogger logger)
         {
             _employeeRepository = employeeRepository;
             _logger = logger;
+        }
+
+        public EmployeeService(IEmployeeRepository @object)
+        {
+            this.@object = @object;
         }
 
         public Employee Create(Employee employee)
