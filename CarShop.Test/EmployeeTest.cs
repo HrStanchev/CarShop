@@ -105,7 +105,7 @@ namespace CarShop.Test
         public void Employee_GetById_NotFound()
         {
             //setup
-            var employeeId = 2;
+            var employeeId = 3;
 
             _employeeRepository.Setup(x => x.GetById(employeeId))
                 .Returns(Employees.FirstOrDefault(t => t.Id == employeeId));
@@ -115,7 +115,6 @@ namespace CarShop.Test
 
             //Assert
             var notFoundObjectResult = result as NotFoundObjectResult;
-            //Assert.NotNull(notFoundObjectResult);
             Assert.NotNull(notFoundObjectResult);
             Assert.Equal(notFoundObjectResult.StatusCode, (int)HttpStatusCode.NotFound);
 

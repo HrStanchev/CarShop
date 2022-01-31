@@ -33,7 +33,7 @@ namespace CarShop.Controllers
             if (id <= 0) return BadRequest();
 
             var result = _clientService.GetById(id);
-            if (result == null) return NotFound();
+            if (result == null) return NotFound(id);
 
             var response = _mapper.Map<ClientResponse>(result);
 
@@ -48,7 +48,7 @@ namespace CarShop.Controllers
             var client = _mapper.Map<Client>(clientRequest);
             var result = _clientService.Create(client);
 
-            return Ok(client);
+            return Ok(result);
         }
 
         [HttpDelete]
@@ -58,7 +58,7 @@ namespace CarShop.Controllers
 
             var result = _clientService.Delete(id);
 
-            if (result == null) return NotFound();
+            if (result == null) return NotFound(id);
 
             return Ok(result);
         }

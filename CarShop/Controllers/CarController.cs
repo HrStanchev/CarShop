@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using CarShop.BL.Interfaces;
+using CarShop.DL.Interfaces;
 using CarShop.Models.DTO;
 using CarShop.Models.Requests;
 using CarShop.Models.Responses;
@@ -20,6 +21,8 @@ namespace CarShop.Controllers
             _mapper = mapper;
         }
 
+        
+
         [HttpGet("GetAll")]
         public IActionResult GetAll()
         {
@@ -33,7 +36,7 @@ namespace CarShop.Controllers
             if (id <= 0) return BadRequest();
 
             var result = _carService.GetById(id);
-            if (result == null) return NotFound();
+            if (result == null) return NotFound(id);
 
             var response = _mapper.Map<CarResponse>(result);
 
@@ -48,7 +51,7 @@ namespace CarShop.Controllers
             var car = _mapper.Map<Car>(carRequest);
             var result = _carService.Create(car);
 
-            return Ok(car);
+            return Ok(result);
         }
 
         [HttpDelete]
@@ -58,7 +61,7 @@ namespace CarShop.Controllers
 
             var result = _carService.Delete(id);
 
-            if (result == null) return NotFound();
+            if (result == null) return NotFound(id);
 
             return Ok(result);
         }

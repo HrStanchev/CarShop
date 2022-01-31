@@ -33,7 +33,8 @@ namespace CarShop.Controllers
             if (id <= 0) return BadRequest();
 
             var result = _employeeService.GetById(id);
-            if (result == null) return NotFound();
+
+            if (result == null) return NotFound(id);
 
             var response = _mapper.Map<EmployeeResponse>(result);
 
@@ -48,17 +49,17 @@ namespace CarShop.Controllers
             var employee = _mapper.Map<Employee>(employeeRequest);
             var result = _employeeService.Create(employee);
 
-            return Ok(employee);
+            return Ok(result);
         }
 
         [HttpDelete]
         public IActionResult Delete(int id)
         {
-            if (id < 0) return BadRequest();
+            if (id <= 0) return BadRequest();
 
             var result = _employeeService.Delete(id);
 
-            if (result == null) return NotFound();
+            if (result == null) return NotFound(id);
 
             return Ok(result);
         }
