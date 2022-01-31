@@ -9,8 +9,6 @@ namespace CarShop
     {
         public static void Main(string[] args)
         {
-            //         CreateHostBuilder(args).Build().Run();
-
             Log.Logger = new LoggerConfiguration()
                 .Enrich.FromLogContext()
                 .WriteTo.Console()
@@ -33,6 +31,7 @@ namespace CarShop
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
+                .UseSerilog()
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
