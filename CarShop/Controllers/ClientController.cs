@@ -43,7 +43,7 @@ namespace CarShop.Controllers
         [HttpPost("Create")]
         public IActionResult CreateClient([FromBody] ClientRequest clientRequest)
         {
-            if(clientRequest == null) return BadRequest();
+            if (clientRequest == null) return BadRequest();
 
             var client = _mapper.Map<Client>(clientRequest);
             var result = _clientService.Create(client);
@@ -69,7 +69,7 @@ namespace CarShop.Controllers
             if (clientRequest == null) return BadRequest();
 
             var searchClient = _clientService.GetById(clientRequest.Id);
-            if(searchClient == null) return NotFound(clientRequest.Id);
+            if (searchClient == null) return NotFound(clientRequest.Id);
 
             searchClient.Name = clientRequest.Name;
             searchClient.PaymentType = clientRequest.PaymentType;

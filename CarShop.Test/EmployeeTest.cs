@@ -1,18 +1,18 @@
-﻿using CarShop.Models.DTO;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using AutoMapper;
+﻿using AutoMapper;
 using CarShop.BL.Interfaces;
 using CarShop.BL.Services;
 using CarShop.Controllers;
 using CarShop.DL.Interfaces;
 using CarShop.Extensions;
+using CarShop.Models.DTO;
 using CarShop.Models.Requests;
 using CarShop.Models.Responses;
 using Microsoft.AspNetCore.Mvc;
 using Moq;
 using Serilog;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net;
 using Xunit;
 
 namespace CarShop.Test
@@ -99,7 +99,7 @@ namespace CarShop.Test
             Assert.Equal(expectedName, employee.Name);
         }
 
-        
+
 
         [Fact]
         public void Employee_GetById_NotFound()

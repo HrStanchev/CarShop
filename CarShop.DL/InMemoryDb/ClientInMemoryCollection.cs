@@ -56,7 +56,7 @@ namespace CarShop.DL.InMemoryDb
                 Discount=0,
                 PaymentType = Models.Enums.PaymentType.Cash
             },
-            
+
         };
     }
 }

@@ -5,8 +5,8 @@ using CarShop.Controllers;
 using CarShop.DL.Interfaces;
 using CarShop.Extensions;
 using CarShop.Models.DTO;
-using CarShop.Models.Responses;
 using CarShop.Models.Requests;
+using CarShop.Models.Responses;
 using Microsoft.AspNetCore.Mvc;
 using Moq;
 using Serilog;
@@ -131,7 +131,7 @@ namespace CarShop.Test
         [Fact]
         public void Part_GetById_NotFound()
         {
-          
+
             var partId = 3;
 
             _partRepository.Setup(x => x.GetById(partId))

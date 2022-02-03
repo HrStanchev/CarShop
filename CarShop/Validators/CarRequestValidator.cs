@@ -10,6 +10,6 @@ namespace CarShop.Validators
             RuleFor(x => x.Make).NotEmpty().NotNull();
             RuleFor(x => x.Model).NotEmpty().NotNull();
         }
-            
+
     }
 }

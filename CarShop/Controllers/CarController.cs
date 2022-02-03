@@ -1,6 +1,5 @@
 ﻿using AutoMapper;
 using CarShop.BL.Interfaces;
-using CarShop.DL.Interfaces;
 using CarShop.Models.DTO;
 using CarShop.Models.Requests;
 using CarShop.Models.Responses;
@@ -21,7 +20,7 @@ namespace CarShop.Controllers
             _mapper = mapper;
         }
 
-        
+
 
         [HttpGet("GetAll")]
         public IActionResult GetAll()

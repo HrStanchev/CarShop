@@ -32,6 +32,6 @@ namespace CarShop.DL.InMemoryDb
                 Model = "Civic"
             }
         };
-        
+
     }
 }

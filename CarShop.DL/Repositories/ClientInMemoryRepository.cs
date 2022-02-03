@@ -39,7 +39,7 @@ namespace CarShop.DL.Repositories
 
         public Client Update(Client client)
         {
-            var result = ClientInMemoryCollection.ClientDb.FirstOrDefault(x =>x.Id == client.Id);
+            var result = ClientInMemoryCollection.ClientDb.FirstOrDefault(x => x.Id == client.Id);
 
             result.Name = client.Name;
 

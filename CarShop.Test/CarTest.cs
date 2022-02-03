@@ -5,8 +5,8 @@ using CarShop.Controllers;
 using CarShop.DL.Interfaces;
 using CarShop.Extensions;
 using CarShop.Models.DTO;
-using CarShop.Models.Responses;
 using CarShop.Models.Requests;
+using CarShop.Models.Responses;
 using Microsoft.AspNetCore.Mvc;
 using Moq;
 using Serilog;
@@ -83,7 +83,7 @@ namespace CarShop.Test
         [Fact]
         public void Car_GetById_ModelCheck()
         {
-       
+
             var carId = 2;
             var expectedModel = "TestModel2";
 
@@ -106,7 +106,7 @@ namespace CarShop.Test
         [Fact]
         public void Car_GetById_MakeCheck()
         {
-            
+
             var carId = 2;
             var expectedMake = "TestMake2";
 
